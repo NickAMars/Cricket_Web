@@ -10,7 +10,7 @@ const MainTopic = styled(Typography)`
 `;
 const SubTopic = styled(Typography)`
 `;
-const Cta = styled.div`
+const CtaContainer = styled.div`
     max-width: 360px;
     padding-top: 15px;
 `;
@@ -18,7 +18,6 @@ const ButtonCta = styled(Button)`
     margin-top: 15px; 
     padding: 1rem 2rem;
     width: 100%;
-    border-radius: 0px;
 `;
 const Divider = styled.div`
     display: flex;
@@ -39,17 +38,12 @@ export const FirstTopic: React.FC<{}> = (props) => {
                 <Divider>
                     <Part1>
                         <MainTopic variant='h1'>
-                            <span>
-                                Try Cricket&nbsp;
-                            </span>
-                            <span>
-                                for Free
-                            </span>
+                                Try Cricket for Free
                         </MainTopic>
                         <SubTopic variant='h3'>Get a 14-day free trial of the Cricket Network without interrupting your current service. </SubTopic>
-                        <Cta>
+                        <CtaContainer>
                             <ButtonCta variant="contained" color="secondary">Get the app now</ButtonCta>
-                        </Cta>
+                        </CtaContainer>
                     </Part1>
                     <div>
                         <HeroLogo src={HeaderFirst} alt="hero"/>

@@ -14,3 +14,11 @@ export const NAV_ITEMS: Navigation [] = [
     {text: 'Sign In', Icon: PersonIcon, dropdown: true},
     {text: 'Cart(0)', Icon: ShoppingCartIcon, dropdown: false},
 ];
+
+export const SUB_NAB_ITEMS: Navigation [] = [
+    {text: "Phones", dropdown: false},
+    {text: "Plans", dropdown: false},
+    {text: "Free Trial", dropdown: false},
+    {text: "Pay Bill", dropdown: false},
+    {text: "More", dropdown: false},
+]

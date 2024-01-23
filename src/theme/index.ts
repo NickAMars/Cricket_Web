@@ -9,17 +9,22 @@ export const theme = createTheme({
         },
         secondary: {
           main: '#FFF',
-        },
+        }
     },
     typography: {
       h1: {
-        fontSize: 40,
+        fontSize: "8rem",
+        fontWeight: 900,
+        color: "#FFF"
       },
       h2: {
         fontSize: 30,
+        fontWeight: 900
       },
       h3: {
-        fontSize: 20,
+        fontSize: "2.5rem",
+        fontWeight: 900,
+        color: "#000"
       },
       subtitle1: {
         fontSize: 12,

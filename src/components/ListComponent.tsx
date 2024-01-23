@@ -5,6 +5,7 @@ import { Navigation } from "@src/interface/Navigation";
 import styled from "styled-components";
 interface Props {
     list: Navigation[];
+    isBGColor: boolean
 }
 
 
@@ -25,13 +26,13 @@ const ListItemStyle = styled(ListItem)`
     }
 `;
 export const ListComponent: React.FC<Props> = (props) => {
-    const { list } = props;
+    const { list, isBGColor} = props;
     return <ListStyle>
     {
         list.map(item => {
         const {text, Icon}  = item;
         return <ListItemStyle   key={text} disablePadding>
-                        <ButtonComponent text={text} Icon={Icon}/>
+                        <ButtonComponent isBGColor={isBGColor} text={text} Icon={Icon}/>
             </ListItemStyle>
                
         })

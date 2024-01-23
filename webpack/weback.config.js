@@ -10,7 +10,7 @@ module.exports = {
     },
     devtool: "source-map",
     resolve: {
-      extensions: [".ts", ".tsx", ".js", ".jsx", ".svg", ".jpg", "pdf"],
+      extensions: [".ts", ".tsx", ".js", ".jsx", ".svg", ".jpg", ".png", ".webp"],
       alias: {
         '@src': path.resolve(__dirname, "..", 'src'),
         '@assets': path.resolve(__dirname, "..", 'src/assets'),
@@ -40,7 +40,7 @@ module.exports = {
             use: "babel-loader"
           },
           {
-            test: /\.(png|jpg|gif|pdf)$/,
+            test: /\.(png|jpg|webp)$/,
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',

@@ -5,9 +5,14 @@ const SubHeaderStyle = styled.nav`
     height: 80px;
     background-color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 0 60px;
 `;
+const CricketLogo = styled.img`
+    height: 80px;
+`
 
 export {
-    SubHeaderStyle
+    SubHeaderStyle,
+    CricketLogo
 }

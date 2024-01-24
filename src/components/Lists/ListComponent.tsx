@@ -1,6 +1,6 @@
 
 import { List, ListItem } from "@mui/material"
-import ButtonComponent from "@src/components/Button/NavigationButton";
+import NavigationButton from "@src/components/Button/NavigationButton";
 import { Navigation } from "@src/interface/Navigation";
 import styled from "styled-components";
 interface Props {
@@ -32,7 +32,7 @@ export const ListComponent: React.FC<Props> = (props) => {
         list.map(item => {
         const {text, Icon}  = item;
         return <ListItemStyle   key={text} disablePadding>
-                        <ButtonComponent isBGColor={isBGColor} text={text} Icon={Icon}/>
+                        <NavigationButton isBGColor={isBGColor} text={text} Icon={Icon}/>
             </ListItemStyle>
                
         })

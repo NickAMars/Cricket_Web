@@ -8,7 +8,7 @@ import styled from "styled-components";
   }
   const ButtonStyle = styled(IconButton)`
     height: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: ${props => props.theme.palette.primary.main};
     margin-right: 20px;
     cursor: auto;
@@ -34,7 +34,7 @@ export const IconLabel: React.FC<Props> = (props) => {
               <ButtonStyle disableFocusRipple={true} disableRipple={true} color="primary">
                 <Icon  fontSize={"large"}/>
               </ButtonStyle>
-              <Description variant="subtitle2">{text}</Description>
+              <Description variant="body1">{text}</Description>
           </IconLabelContainer> 
   );
 };

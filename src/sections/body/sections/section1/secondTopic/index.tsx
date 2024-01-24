@@ -1,6 +1,6 @@
 import { Box, styled } from "@mui/material"
 import { LargeCard } from "@src/components/Cards/LargeCard"
-import { IconLabel } from "@src/components/IconLabel";
+import { IconLabel } from "@src/components/DisplayIcon/IconLabel";
 import { LabelS1 } from "@src/utility/label-icons";
 import { largeCardList } from "@src/utility/main-cards";
 

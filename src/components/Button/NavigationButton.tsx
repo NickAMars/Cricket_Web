@@ -15,7 +15,7 @@ import styled from "styled-components";
     }
   `
   // backgroundColor: isBGColor? "transparent": "#5b5a5a"
-const ButtonComponent: React.FC<Props> = (props) => {
+const NavigationButton: React.FC<Props> = (props) => {
   const { text, Icon, isBGColor} = props;
   return ( 
     <ButtonStyle  disableFocusRipple={isBGColor}
@@ -23,4 +23,4 @@ const ButtonComponent: React.FC<Props> = (props) => {
   );
 };
 
-export default ButtonComponent;
+export default NavigationButton;

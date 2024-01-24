@@ -31,7 +31,7 @@ export const SecondTopic: React.FC<{}> = (props) => {
                 {largeCardList.map((card, i) => <LargeCard key={i} {...card}/>)}
             </MainCards>
             <SmallContainer>
-                {LabelS1.map((label => <IconLabel {...label}/> ))}
+                {LabelS1.map((label => <IconLabel key={label.text} {...label}/> ))}
             </SmallContainer>
     </SecondTopicContainer>
 }

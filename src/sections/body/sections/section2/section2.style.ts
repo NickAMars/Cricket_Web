@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import styled from "styled-components";
 
 const SecondStyle = styled.section`
@@ -35,11 +35,63 @@ const PlanContainer = styled.div`
 const HiddenDetail = styled(Typography)`
     margin-bottom: 15px;
 `;
+
+const GlobalNetwork = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+        flex: 1;
+    }
+`;
+const WorldMap = styled.div`
+    height: 100%;
+`;
+
+const Coverage = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10rem; 
+`;
+const CoverageHeader = styled(Typography)`
+    font-weight: 900;
+    margin-bottom: 10px;
+`;
+const CoverageSubTopic = styled(Typography)`
+    margin: 2.5rem 0;
+    /* padding: 0 10rem; */
+`;
+const CoverageHidden = styled(Typography)`
+    margin-bottom: 20px;
+    align-self: flex-start;
+`;
+const CoverageAction = styled.div`
+    display: flex;
+    width: 100%;
+`;
+const StoreButton = styled(Button)`
+    padding: 1rem 2rem;
+    width: 25rem;
+    margin-right: 30px;
+`;
+const MapButton = styled(Button)`
+    padding: 1rem 2rem;
+    width: 25rem;
+`;
 export {
     SecondStyle,
     Plan,
     PlanIncluded,
     PlanIncludedHeader,
     PlanContainer,
-    HiddenDetail
+    HiddenDetail,
+    GlobalNetwork,
+    WorldMap,
+    Coverage,
+    CoverageHeader,
+    CoverageSubTopic,
+    CoverageHidden,
+    CoverageAction,
+    StoreButton,
+    MapButton
 }

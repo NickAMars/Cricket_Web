@@ -27,14 +27,21 @@ export const theme = createTheme({
         color: "#000"
       },
       subtitle1: {
-        fontSize: 12,
+        fontSize: 22,
+        fontWeight: 900
+      },
+      subtitle2: {
+        fontSize: 15,
       },
       button: {
         fontSize: 12,
         fontWeight: 900
       },
+      body1: {
+        fontSize: 14,
+      },
       body2: {
-        fontSize: 12,
+        fontSize: 8,
       }
     }
 })

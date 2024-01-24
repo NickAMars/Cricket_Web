@@ -4,12 +4,12 @@ import styled from "styled-components";
 const SecondStyle = styled.section`
     display: flex;
     flex-direction:  column;
-    padding: 0 10rem;
 `;
+
 const Plan = styled(Box)`
     display: flex;
     flex-direction:  row;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 40px;
 `;
 const PlanIncluded = styled(Box)`
@@ -20,6 +20,7 @@ const PlanIncluded = styled(Box)`
     margin: 20px 0;
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.25);
 `;
 const PlanIncludedHeader = styled(Typography)`
     font-weight: 900;
@@ -51,7 +52,9 @@ const Coverage = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10rem; 
+    /* padding: 0 10rem;  */
+    width: 20rem;
+    padding-left: 20px;
 `;
 const CoverageHeader = styled(Typography)`
     font-weight: 900;

@@ -15,6 +15,7 @@ const IconCardContain = styled(Card)`
     display: flex;
     flex-direction: column;
     justify-content:  space-between;
+    box-shadow: 0 8px 16px rgba(0,0,0,.25);
 `;
 const CardImage = styled(CardMedia)`
     height: 8rem;

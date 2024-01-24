@@ -1,7 +1,6 @@
 import { Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
 import styled from "styled-components";
 
-
 interface Props {
     Icon: any, 
     title: string, 
@@ -10,51 +9,54 @@ interface Props {
     buttonDesc: string
   }
 
-const LargeCardContain = styled(Card)`
-    width: 38rem;
-    padding: 33px 20px;
+const ArticleCardContain = styled(Card)`
+    width: 32rem;
+    padding: 0;
     border-radius: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content:  space-between;
-    box-shadow: 0 8px 16px rgba(0,0,0,.25);
+    box-shadow: none;
+    border: none;
+    margin: 0 2rem;
 `;
 const CardImage = styled(CardMedia)`
-    height: 25rem;
+    height: 17rem;
     width: 100%;
-    margin: 0 auto;
 `;
 
 const Title = styled(Typography)`
     display: flex;
     justify-content: center;
+    font-weight: 500;
 `;
 
 const ActionButton = styled(Button)`
-    color: #fff;
-    width: 100%;
-    background-color: #3170B7;
-    padding: 1.7rem 3rem;
-    &:hover{
-        background-color: #003E7F;
-    }
+    color: #0288d1;
+    font-size: 1.3rem;
+    text-decoration: underline;
 `;
-export const LargeCard: React.FC<Props> = (props) => {
+
+const SubTitle = styled(Typography)`
+    text-align: justify;
+    margin-bottom: 10px;
+`;
+export const ArticleCard: React.FC<Props> = (props) => {
     const { Icon, title, subtopic, smallDesc, buttonDesc} = props;
-    return (<LargeCardContain >
-                <CardHeader title={<Title variant="subtitle1">{title}</Title>}/>
+    return (<ArticleCardContain >
                 <CardImage
                     image={ Icon }
                     title="green iguana"
                     />
+                <CardHeader title={<Title variant="subtitle2">{title}</Title>}/>
                 <CardContent>
-                <Typography variant="body1">{subtopic}</Typography>
-                <Typography variant="body2">{smallDesc}</Typography>
+                    <SubTitle variant="body1">{subtopic}</SubTitle>
+                    <SubTitle variant="body2">{smallDesc}</SubTitle>
                 </CardContent>
                 <CardActions>
-                    <ActionButton variant="contained" size="large">{buttonDesc}</ActionButton>
+                    <ActionButton disableFocusRipple disableRipple  size="large">{buttonDesc}</ActionButton>
                 </CardActions>
-        </LargeCardContain>
+        </ArticleCardContain>
     );
   };

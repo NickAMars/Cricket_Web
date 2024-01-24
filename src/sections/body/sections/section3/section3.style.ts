@@ -6,6 +6,11 @@ const ThirdStyle = styled.section`
     flex-direction:  column;
 `;
 
+const ArticleContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
 export {
-    ThirdStyle
+    ThirdStyle,
+    ArticleContainer
 }

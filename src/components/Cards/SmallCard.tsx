@@ -18,6 +18,7 @@ const SmallCardContain = styled(Card)`
     flex-direction: column;
     justify-content:  space-between;
     margin: 0 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,.25);
 `;
 
 const Title = styled(Typography)`

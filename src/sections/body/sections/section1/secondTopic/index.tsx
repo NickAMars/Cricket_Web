@@ -21,7 +21,7 @@ const SmallContainer = styled(Box)`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* height: m; */
+    margin: 0 5rem;
 `;
 
 

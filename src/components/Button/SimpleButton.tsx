@@ -10,6 +10,7 @@ import styled from "styled-components";
     color: #fff;
     background-color: #3170B7;
     padding: 1rem 2rem;
+    margin-bottom: 10px;
     &:hover{
       background-color: #003E7F;
     }

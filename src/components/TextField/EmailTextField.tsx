@@ -7,6 +7,7 @@ const EmailTextField = styled(Box)`
     display: flex;
     align-items: flex-end;
     color: #fff;
+    margin-bottom: 10px;
 `;
 const InputField = styled(TextField)`
     height: 48px;

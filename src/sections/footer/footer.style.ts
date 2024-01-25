@@ -35,7 +35,6 @@ const SecondFooterStyle = styled.div`
     background-color: #404041;
     color: #fff;
     justify-content:  center;
-    padding: 5rem 10rem;
     & > * {
         margin: 0 40px;
     }
@@ -43,6 +42,7 @@ const SecondFooterStyle = styled.div`
 const EndingFooterStyle = styled.div`
     background-color: #404041;
     color: #fff;
+    padding: 5rem 10rem;
 `;
 
 const JoinContain = styled.div`
@@ -83,7 +83,8 @@ const FooterAncher = styled.a`
 const FooterAncherText = styled(Typography)`
 `;
 const CopyRightLicense = styled(Typography)`
-    text-align: center;
+    margin-top: 20px;   
+    /* text-align: center; */
 `;
 export {
     FooterStyle,

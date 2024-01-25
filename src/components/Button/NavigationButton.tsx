@@ -1,13 +1,18 @@
-import React from "react";
-import { Button } from "@mui/material";
+import React, { useState } from "react";
+import { Button, Typography } from "@mui/material";
 import styled from "styled-components";
+import { FlatDropDown } from "../DropDown/FlatDropDown";
 
   interface Props {
     text: string;
     Icon?: any;
     isBGColor?: boolean;
+    Dropdown?: any;
+    size?: string 
+    options?: string []
   }
   const ButtonStyle = styled(Button)`
+  position: unset;
     color: ${props => props.disableFocusRipple? "#000": "#fff"};
     &:hover{
       color:  ${props => props.disableFocusRipple? "#3170b7": "#fff"};
@@ -16,10 +21,31 @@ import styled from "styled-components";
   `
   // backgroundColor: isBGColor? "transparent": "#5b5a5a"
 const NavigationButton: React.FC<Props> = (props) => {
-  const { text, Icon, isBGColor} = props;
-  return ( 
-    <ButtonStyle  disableFocusRipple={isBGColor}
-     startIcon={Icon? <Icon />: undefined}>{ text }</ButtonStyle>
+  const [open, setOpen] = useState(false);
+  const { text, Icon, isBGColor, Dropdown, size, options} = props;
+  const handleOpen = (event: Event | React.SyntheticEvent) => {
+    setOpen(true);
+  };
+  const handleClose = (event: Event | React.SyntheticEvent) => {
+    setOpen(false);
+  };
+
+  function handleListKeyDown(event: React.KeyboardEvent) {
+    if (event.key === "Tab") {
+      event.preventDefault();
+      setOpen(false); 
+    } else if (event.key === "Escape") {
+      setOpen(false);
+    }
+  }
+  return ( <>
+      <ButtonStyle  disableFocusRipple={isBGColor} disableRipple={true} 
+        onMouseOut={handleClose} onMouseOver={handleOpen}
+        startIcon={Icon? <Icon />: undefined} endIcon={Dropdown? <Dropdown />: undefined}>
+        <Typography sx={{ fontSize: size? size : "12px"}}>{ text }</Typography>
+        {options && <FlatDropDown  handleClose={handleClose} handleListKeyDown={handleListKeyDown} open={open} options={options}/> }
+      </ButtonStyle>
+  </>
   );
 };
 

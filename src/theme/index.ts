@@ -36,13 +36,13 @@ export const theme = createTheme({
         fontSize: 18,
       },
       body1: {
-        fontSize: 14,
+        fontSize: 12,
       },
       body2: {
         fontSize: 9,
       },
       button: {
-        fontSize: 14,
+        fontSize: 12,
         fontWeight: 900,
         textTransform: 'none'
       },

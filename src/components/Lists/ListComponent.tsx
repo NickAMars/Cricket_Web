@@ -11,14 +11,18 @@ interface Props {
 
 const ListStyle = styled(List)`
     display: flex;
+    /* position: relative; */
+    position: unset;
 `;
 const ListItemStyle = styled(ListItem)`
     display: flex;
-    width: 110px;
+    width: auto;
+    position: unset;
     & > * {
+        position: unset;
         height: 50px;
-        width: 100%;
-        padding: 0 10px;
+        /* width: 100%; */
+        padding: 0 20px;
         border-radius: 0;
         &:hover {
             background-color: #5b5a5a;
@@ -30,9 +34,8 @@ export const ListComponent: React.FC<Props> = (props) => {
     return <ListStyle>
     {
         list.map(item => {
-        const {text, Icon}  = item;
-        return <ListItemStyle   key={text} disablePadding>
-                        <NavigationButton isBGColor={isBGColor} text={text} Icon={Icon}/>
+        return <ListItemStyle   key={item.text} disablePadding>
+                        <NavigationButton {...item} isBGColor={isBGColor}/>
             </ListItemStyle>
                
         })

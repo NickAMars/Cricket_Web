@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 const SubHeaderStyle = styled.nav`
+    position: relative;
     height: 80px;
     background-color: #fff;
     display: flex;

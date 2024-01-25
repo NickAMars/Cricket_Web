@@ -1,6 +1,8 @@
 export interface  Navigation {
     text: string, 
     Icon?: any, 
-    dropdown?: boolean,
-    color?: string
+    Dropdown?: any,
+    color?: string,
+    size?: string
+    options?: string []
 }

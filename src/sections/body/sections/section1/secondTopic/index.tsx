@@ -13,6 +13,7 @@ const MainCards = styled(Box)`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: -90px;
     & > * {
         margin: 12px;

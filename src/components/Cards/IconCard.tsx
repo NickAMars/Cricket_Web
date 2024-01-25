@@ -8,8 +8,7 @@ interface Props {
   }
 
 const IconCardContain = styled(Card)`
-    width: 13rem;
-    /* padding: 33px 20px; */
+    width: 15rem;
     border-radius: 10px;
     text-align: center;
     display: flex;

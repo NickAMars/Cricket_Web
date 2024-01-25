@@ -17,20 +17,27 @@ const HiddenDetail = styled(Typography)`
     text-align: center;
 `;
 
-const TryCricketContainer = styled(Typography)`
+const TryCricketContainer = styled.div`
     margin-top: 60px;
+    margin-bottom: 1.5rem;
     display: flex;
-    & > * {
-        flex: 1;
-    }
+    justify-content: center;
+    flex-wrap: wrap;
 `;
 
 const TryCricketSubContainer = styled.div`
     display: flex;
     flex-direction: column;
+    width: 63rem;
     & > * {
         margin-bottom: 1rem;
     }
+`
+const Piture = styled.picture`
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 40px;
+    height: 230px;
 `
 export const Section5: React.FC<{}> = (props) => {
     return <FifthStyle>
@@ -46,10 +53,11 @@ export const Section5: React.FC<{}> = (props) => {
                     <ActionButton color="info" variant="outlined" size="large">
                             <Typography variant="button">Explore Testimonials</Typography>
                     </ActionButton>
-                    <TryCricketContainer>
-                        <picture>
+                </Container>
+                <TryCricketContainer>
+                        <Piture>
                             <img src={TryCricket} alt="tryCricket" />
-                        </picture>
+                        </Piture>
                         <TryCricketSubContainer>
                             <Typography variant="h3">Try Cricket Wireless on Us</Typography>
                             <Typography variant="subtitle2">
@@ -58,6 +66,5 @@ export const Section5: React.FC<{}> = (props) => {
                             <ActionButton color="info" variant="contained" size="large">Get TryCricket App</ActionButton>
                         </TryCricketSubContainer>
                     </TryCricketContainer>
-                </Container>
             </FifthStyle>
 }

@@ -42,8 +42,9 @@ export const theme = createTheme({
         fontSize: 9,
       },
       button: {
-        fontSize: 12,
-        fontWeight: 900
+        fontSize: 14,
+        fontWeight: 900,
+        textTransform: 'none'
       },
     }
 })

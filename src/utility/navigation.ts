@@ -24,7 +24,7 @@ export const SUB_NAB_ITEMS: Navigation [] = [
     options: ["Shop Phones", "Bring Your Own Phone"]},
     {text: "Free Trial", Dropdown: undefined, size: "17px"},
     {text: "Pay Bill", Dropdown: KeyboardArrowDownIcon, size: "17px",
-    options: ["Shop Phones", "Deals", "Hotspots", "Accessories"]},
+    options: ["Quick Pay", "Pay My Balance"]},
     {text: "More", Dropdown: KeyboardArrowDownIcon, size: "17px",
-    options: ["Shop Phones", "Deals", "Hotspots", "Accessories"]},
+    options: ["Bring Your Own Phone", "How Cricket Works", "Why Choose Cricket", "Support"]},
 ]

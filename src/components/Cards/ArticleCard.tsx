@@ -29,7 +29,7 @@ const CardImage = styled(CardMedia)`
 const Title = styled(Typography)`
     display: flex;
     justify-content: center;
-    font-weight: 500;
+    font-weight: 900;
 `;
 
 const ActionButton = styled(Button)`

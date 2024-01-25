@@ -40,10 +40,13 @@ const ActionButton = styled(Button)`
         background-color: #003E7F;
     }
 `;
+const Header = styled(CardHeader)`
+    font-weight: 900;
+`;
 export const LargeCard: React.FC<Props> = (props) => {
     const { Icon, title, subtopic, smallDesc, buttonDesc} = props;
     return (<LargeCardContain >
-                <CardHeader title={<Title variant="subtitle1">{title}</Title>}/>
+                <Header title={<Title variant="subtitle1">{title}</Title>}/>
                 <CardImage
                     image={ Icon }
                     title="green iguana"

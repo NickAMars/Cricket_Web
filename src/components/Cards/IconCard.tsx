@@ -27,10 +27,13 @@ const Title = styled(Typography)`
     display: flex;
     justify-content: center;
 `;
+const Header = styled(CardHeader)`
+    font-weight: 900;
+`;
 export const IconCard: React.FC<Props> = (props) => {
     const { title, subtopic} = props;
     return (<IconCardContain >
-                <CardHeader title={<Title variant="subtitle1">{title}</Title>}/>
+                <Header title={<Title variant="subtitle1">{title}</Title>}/>
                 <CardContent>
                     <Typography variant="body1">{subtopic}</Typography>
                 </CardContent>

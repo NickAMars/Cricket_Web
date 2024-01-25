@@ -32,6 +32,10 @@ const Seperate = styled.div`
     display: flex;
     justify-content: space-between;
 `;
+
+const DealText = styled(Typography)`
+    font-weight: 900;
+`;
 export const SmallCard: React.FC<Props> = (props) => {
     const { title, subtopic, line, price} = props;
     return (<SmallCardContain >
@@ -39,8 +43,8 @@ export const SmallCard: React.FC<Props> = (props) => {
                 <CardContent>
                     <SubTitle variant="body1">{subtopic}</SubTitle>
                     <Seperate>
-                        <Typography variant="subtitle1">{line}</Typography>
-                        <Typography color="primary" variant="subtitle1">{price}</Typography>
+                        <DealText variant="subtitle1">{line}</DealText>
+                        <DealText color="primary" variant="subtitle1">{price}</DealText>
                     </Seperate>
                 </CardContent>
         </SmallCardContain>

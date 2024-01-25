@@ -35,10 +35,14 @@ const SecondFooterStyle = styled.div`
     background-color: #404041;
     color: #fff;
     justify-content:  center;
-    padding: 5rem 25rem;
+    padding: 5rem 10rem;
     & > * {
         margin: 0 40px;
     }
+`;
+const EndingFooterStyle = styled.div`
+    background-color: #404041;
+    color: #fff;
 `;
 
 const JoinContain = styled.div`
@@ -50,6 +54,7 @@ const JoinHeader = styled(Typography)`
 `;
 const JoinMedia = styled.div`
     display: flex;
+    cursor: pointer;
     justify-content: space-between;
     & > * {
         width: 4rem;
@@ -60,6 +65,7 @@ const JoinMedia = styled.div`
 const FootContain = styled.div`
     display: flex;
     flex-direction: column;
+    /* padding: 0 20px; */
 `;
 const FooterHeader = styled(Typography)`
 `;
@@ -76,6 +82,9 @@ const FooterAncher = styled.a`
 `;
 const FooterAncherText = styled(Typography)`
 `;
+const CopyRightLicense = styled(Typography)`
+    text-align: center;
+`;
 export {
     FooterStyle,
     SignUpContainer,
@@ -90,5 +99,7 @@ export {
     FooterHeader,
     FooterAncherContainer,
     FooterAncher,
-    FooterAncherText
+    FooterAncherText,
+    CopyRightLicense,
+    EndingFooterStyle
 }

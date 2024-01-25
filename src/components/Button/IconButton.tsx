@@ -10,8 +10,9 @@ const Icon = styled(IconButton)`
     display: flex;
     border-radius: 0;
     height: 100%;
+    background-color: ${props=>props.theme.palette.primary.light};
     &:hover {
-        background-color: #5b5a5a;
+        background-color: ${props=>props.theme.palette.primary.dark};
         border-radius: 0;
     }
 `;

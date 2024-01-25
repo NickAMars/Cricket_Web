@@ -8,17 +8,18 @@ import styled from "styled-components";
 
 const Icon = styled(IconButton)`
     display: flex;
+    color: #000;
     border-radius: 0;
     height: 100%;
-    background-color: ${props=>props.theme.palette.primary.light};
+    background-color: ${props=>props.theme.palette.secondary.main};
     &:hover {
-        background-color: ${props=>props.theme.palette.primary.dark};
+        background-color: ${props=>props.theme.palette.secondary.dark};
         border-radius: 0;
     }
 `;
 export const IconButtonComponent: React.FC<{}> = (props) => {
     return (
-        <Icon color="secondary">
+        <Icon>
             <SearchIcon  fontSize={"large"}/>
         </Icon>
     );

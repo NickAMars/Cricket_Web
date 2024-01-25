@@ -22,7 +22,7 @@ import styled from "styled-components";
     color: #000;
     font-weight: 900;
   `
-  const IconLabelContainer = styled(Typography)`
+  const IconLabelContainer = styled.div`
     display: flex;
     align-items: center;
     margin: 0 auto;

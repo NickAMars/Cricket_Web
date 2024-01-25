@@ -22,7 +22,7 @@ export const Section2: React.FC<{}> = (props) => {
                         <PlanIncludedHeader variant="subtitle2">All Voice/Data Plans Include</PlanIncludedHeader>
                         <PlanContainer>
                             {planIncludeList.map( include => <SmallIconLabel key={include.text} {...include}/>)}
-                            <SimpleButton text='Compare All Plans' />
+                            <SimpleButton text='Compare All Plans' width="20rem"/>
                         </PlanContainer>
                         <HiddenDetail variant="body2">
                                 *5G requires a compatible device and is not available everywhere. See our map for 5G coverage. Learn more about

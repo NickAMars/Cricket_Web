@@ -4,6 +4,7 @@ import styled from "styled-components";
 
   interface Props {
     text: string;
+    width: string;
   }
   const ButtonStyle = styled(Button)`
     color: #fff;
@@ -14,9 +15,10 @@ import styled from "styled-components";
     }
   `
 const SimpleButton: React.FC<Props> = (props) => {
-  const { text } = props;
+  const { text , width} = props;
+
   return ( 
-    <ButtonStyle>{ text }</ButtonStyle>
+    <ButtonStyle sx={{ width: width? width: '100%' }}>{ text }</ButtonStyle>
   );
 };
 

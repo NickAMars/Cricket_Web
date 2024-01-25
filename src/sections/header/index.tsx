@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { HeaderComponent } from "./header.style"
 import { ListComponent } from "@src/components/Lists/ListComponent";
 import { NAV_ITEMS } from "@src/utility/navigation";
-import { SearchBarComponent } from "@src/components/SearchBar";
+import { SearchBarComponent } from "@src/components/TextField/SearchBar";
 import { SubHeaderComponent } from "../subheader";
 
 

@@ -1,5 +1,5 @@
 import { Box, TextField } from "@mui/material";
-import { IconButtonComponent } from "./Button/IconButton";
+import { IconButtonComponent } from "../Button/IconButton";
 import styled from "styled-components";
 import { theme } from "@src/theme";
 

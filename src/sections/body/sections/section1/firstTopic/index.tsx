@@ -18,6 +18,10 @@ const ButtonCta = styled(Button)`
     margin-top: 15px; 
     padding: 1rem 2rem;
     width: 100%;
+    color: #3170B7;
+    &:hover {
+        background-color: #fff;
+    }
 `;
 const Divider = styled.div`
     display: flex;
@@ -42,7 +46,7 @@ export const FirstTopic: React.FC<{}> = (props) => {
                         </MainTopic>
                         <SubTopic variant='h3'>Get a 14-day free trial of the Cricket Network without interrupting your current service. </SubTopic>
                         <CtaContainer>
-                            <ButtonCta variant="contained" color="secondary">Get the app now</ButtonCta>
+                            <ButtonCta disableRipple variant="contained" color="secondary">Get the app now</ButtonCta>
                         </CtaContainer>
                     </Part1>
                     <div>

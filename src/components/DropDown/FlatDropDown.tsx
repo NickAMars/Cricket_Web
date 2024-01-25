@@ -53,7 +53,7 @@ export const FlatDropDown: React.FC<Props> = (props) => {
                                 aria-labelledby="composition-button"
                                 onKeyDown={handleListKeyDown}
                             >
-                                    {options?.map(option => <MenuItemStyle disableRipple={true} onClick={handleClose}>
+                                    {options?.map(option => <MenuItemStyle key={option} disableRipple={true} onClick={handleClose}>
                                         <Typography sx={{ fontSize:"17px"}}>
                                             {option}
                                         </Typography>

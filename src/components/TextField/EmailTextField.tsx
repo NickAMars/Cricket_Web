@@ -7,11 +7,11 @@ const EmailTextField = styled(Box)`
     display: flex;
     align-items: flex-end;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 `;
 const InputField = styled(TextField)`
     height: 48px;
-    width: 540px;
+    width: 50rem;
     & > input {
         background-color: white;
         font-size: ${props => props.theme.typography.body1.fontSize};

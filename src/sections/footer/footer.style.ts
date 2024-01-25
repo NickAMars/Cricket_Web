@@ -20,7 +20,7 @@ const SignUpContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 `;
 const SignUpTitle = styled(Typography)`
     font-weight: 700;

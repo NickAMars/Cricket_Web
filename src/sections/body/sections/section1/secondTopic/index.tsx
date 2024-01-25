@@ -15,6 +15,9 @@ const MainCards = styled(Box)`
     justify-content: center;
     flex-wrap: wrap;
     margin-top: -90px;
+    @media only screen and (max-width: 56em) {
+        margin: 0;
+    }
     & > * {
         margin: 12px;
     }

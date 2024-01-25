@@ -40,24 +40,38 @@ const Container = styled.section`
     padding: 0 20rem;
     display: flex;
     flex-direction:  column;
+    align-items: center;
     @media only screen and (max-width: 65em) {
         padding: 0 15rem;
     }
     @media only screen and (max-width: 50em) {
         padding: 0 10rem;
     }
+
+    & >  *{
+        width: 100%;
+    }
 `;
 
 const SmallContainer = styled(Box)`
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 0 5rem;
 `;
+
+const ArticleContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+
 export {
     MainLayout,
     Line,
     Title,
     Container,
-    SmallContainer
+    SmallContainer,
+    ArticleContainer
 }

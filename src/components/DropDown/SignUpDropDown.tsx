@@ -10,7 +10,7 @@ interface Props {
     handleClose: (event: any) => void;
     handleListKeyDown: (event: any) => void;
   }
-export const DropDown: React.FC<Props> = (props) => {
+export const SignUpDropDown: React.FC<Props> = (props) => {
 
     const {open, handleClose, handleListKeyDown, options} = props;
   

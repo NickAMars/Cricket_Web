@@ -70,7 +70,7 @@ const FootContain = styled.div`
 const FooterHeader = styled(Typography)`
 `;
 const FooterAncherContainer = styled.div`
-    width: 25rem;
+    width: 18rem;
     display: flex;
     flex-direction: column;
 `;

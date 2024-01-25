@@ -63,7 +63,8 @@ export const Section5: React.FC<{}> = (props) => {
                             <Typography variant="subtitle2">
                                 People who come to Cricket stay with Cricket. Now you can see why. Our 14-day free trial lets you test-drive Cricket on your phone without disrupting your existing service with your current carrier.
                             </Typography>
-                            <ActionButton color="info" variant="contained" size="large">Get TryCricket App</ActionButton>
+                            <ActionButton color="info" variant="contained" size="large">
+                            <Typography variant="body1">Get TryCricket App</Typography></ActionButton>
                         </TryCricketSubContainer>
                     </TryCricketContainer>
             </FifthStyle>

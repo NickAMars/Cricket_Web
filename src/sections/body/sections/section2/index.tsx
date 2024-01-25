@@ -41,7 +41,7 @@ export const Section2: React.FC<{}> = (props) => {
                                 *Based on coverage in U.S.
                             </CoverageHidden>
                             <CoverageAction>
-                                <StoreButton variant="outlined">Find A Store Near You</StoreButton>
+                                <StoreButton variant="outlined" color="info">Find A Store Near You</StoreButton>
                                 <MapButton variant="contained" color="info">Coverage Map</MapButton>
                             </CoverageAction>
                         </Coverage>

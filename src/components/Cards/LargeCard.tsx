@@ -56,7 +56,8 @@ export const LargeCard: React.FC<Props> = (props) => {
                 <Typography variant="body2">{smallDesc}</Typography>
                 </CardContent>
                 <CardActions>
-                    <ActionButton variant="contained" size="large">{buttonDesc}</ActionButton>
+                    <ActionButton variant="contained" size="large">
+                    <Typography variant="body1">{buttonDesc}</Typography></ActionButton>
                 </CardActions>
         </LargeCardContain>
     );

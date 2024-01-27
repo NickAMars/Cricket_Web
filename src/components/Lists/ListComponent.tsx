@@ -5,23 +5,25 @@ import { Navigation } from "@src/interface/Navigation";
 import styled from "styled-components";
 interface Props {
     list: Navigation[];
-    isBGColor: boolean
+    isBGColor: boolean;
+    position?: string;
 }
 
 
 const ListStyle = styled(List)`
     display: flex;
-    /* position: relative; */
-    position: unset;
+    position: ${props => props["aria-details"] };
 `;
 const ListItemStyle = styled(ListItem)`
     display: flex;
     width: auto;
-    position: unset;
+    position: ${props => {
+        const pos =props["aria-details"];
+        return pos;
+    }};
     & > * {
-        position: unset;
+        position: ${props => props["aria-details"] };
         height: 50px;
-        /* width: 100%; */
         padding: 0 20px;
         border-radius: 0;
         &:hover {
@@ -30,11 +32,11 @@ const ListItemStyle = styled(ListItem)`
     }
 `;
 export const ListComponent: React.FC<Props> = (props) => {
-    const { list, isBGColor} = props;
-    return <ListStyle>
+    const { list, isBGColor, position} = props;
+    return <ListStyle aria-details={position}>
     {
         list.map(item => {
-        return <ListItemStyle   key={item.text} disablePadding>
+        return <ListItemStyle  aria-details={position}  key={item.text} disablePadding>
                         <NavigationButton {...item} isBGColor={isBGColor}/>
             </ListItemStyle>
                

@@ -8,7 +8,7 @@ export const SubHeaderComponent: React.FC<{}> = (props) => {
     return <SubHeaderStyle>
         <CricketLogo src={Cricket} alt="work"/>
         <Fragment>
-            <ListComponent list={SUB_NAB_ITEMS} isBGColor={true}/>
+            <ListComponent position={"unset"} list={SUB_NAB_ITEMS} isBGColor={true}/>
         </Fragment>
     </SubHeaderStyle>;
 }

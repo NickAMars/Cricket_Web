@@ -10,11 +10,13 @@ export const theme = createTheme({
           light: '#86ce55',
         },
         secondary: {
-          dark: '#DDD',
+          dark: '#000',
           main: '#FFF',
+          light: "#DDD"
         },
         info: {
-          main: '#3170B7'
+          main: '#3170B7',
+          dark: '#003E7F'
         },
     },
     typography: {

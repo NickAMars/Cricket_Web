@@ -10,7 +10,7 @@ export const Header: React.FC<{}> = (props) => {
     return <>
             <HeaderComponent>    
                 <Fragment>
-                    <ListComponent list={NAV_ITEMS} isBGColor={false}/>
+                    <ListComponent  position={"relative"} list={NAV_ITEMS} isBGColor={false}/>
                     <SearchBarComponent />
                 </Fragment>
             </HeaderComponent>

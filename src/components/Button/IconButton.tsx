@@ -13,7 +13,7 @@ const Icon = styled(IconButton)`
     height: 100%;
     background-color: ${props=>props.theme.palette.secondary.main};
     &:hover {
-        background-color: ${props=>props.theme.palette.secondary.dark};
+        background-color: ${props=>props.theme.palette.secondary.light};
         border-radius: 0;
     }
 `;

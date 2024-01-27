@@ -13,7 +13,8 @@ export const NAV_ITEMS: Navigation [] = [
     {text: 'Quick Pay', Icon: undefined, Dropdown: false},
     {text: 'Activate', Icon: undefined, Dropdown: false},
     {text: 'Help', Icon: InsertCommentIcon, Dropdown: false},
-    {text: 'Sign In', Icon: PersonIcon, Dropdown: KeyboardArrowDownIcon},
+    {text: 'Sign In', Icon: PersonIcon, Dropdown: KeyboardArrowDownIcon, 
+        options: [ "Pay My Bill","Auto Pay","Billing History","Usage","Plan & Services","Account Settings"]},
     {text: 'Cart(0)', Icon: ShoppingCartIcon, Dropdown: false},
 ];
 
@@ -28,3 +29,4 @@ export const SUB_NAB_ITEMS: Navigation [] = [
     {text: "More", Dropdown: KeyboardArrowDownIcon, size: "17px",
     options: ["Bring Your Own Phone", "How Cricket Works", "Why Choose Cricket", "Support"]},
 ]
+

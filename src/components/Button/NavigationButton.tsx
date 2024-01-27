@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Typography } from "@mui/material";
 import styled from "styled-components";
 import { FlatDropDown } from "../DropDown/FlatDropDown";
+import { SignUpDropDown } from "../DropDown/SignUpDropDown";
 
   interface Props {
     text: string;
@@ -23,6 +24,7 @@ import { FlatDropDown } from "../DropDown/FlatDropDown";
 const NavigationButton: React.FC<Props> = (props) => {
   const [open, setOpen] = useState(false);
   const { text, Icon, isBGColor, Dropdown, size, options} = props;
+  const empty = () => {};
   const handleOpen = (event: Event | React.SyntheticEvent) => {
     setOpen(true);
   };
@@ -40,10 +42,11 @@ const NavigationButton: React.FC<Props> = (props) => {
   }
   return ( <>
       <ButtonStyle  disableFocusRipple={isBGColor} disableRipple={true} 
-        onMouseOut={handleClose} onMouseOver={handleOpen}
+        onMouseOut={!!Icon ? empty : handleClose} onMouseOver={!!Icon ? empty : handleOpen} onClick={handleOpen}
         startIcon={Icon? <Icon />: undefined} endIcon={Dropdown? <Dropdown />: undefined}>
         <Typography sx={{ fontSize: size? size : "12px"}}>{ text }</Typography>
-        {options && <FlatDropDown  handleClose={handleClose} handleListKeyDown={handleListKeyDown} open={open} options={options}/> }
+        {!Icon && options && <FlatDropDown  handleClose={handleClose} handleListKeyDown={handleListKeyDown} open={open} options={options}/> }
+        {!!Icon && options && <SignUpDropDown  handleClose={handleClose} handleListKeyDown={handleListKeyDown} open={open} options={options}/> }
       </ButtonStyle>
   </>
   );

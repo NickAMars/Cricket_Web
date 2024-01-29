@@ -13,13 +13,13 @@ import styled from "styled-components";
     margin-right: 20px;
     cursor: auto;
     & > svg {
-      color: #fff;
+      color:  ${({theme: {palette: {common}}})=> common.white};
       height: 35px;
       width: 35px;
     }
   `
   const Description = styled(Typography)`
-    color: #000;
+    color:  ${({theme: {palette: {common}}})=> common.black};
     font-weight: 900;
   `
   const IconLabelContainer = styled.div`

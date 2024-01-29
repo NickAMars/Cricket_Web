@@ -9,6 +9,13 @@ const ThirdStyle = styled.section`
 const ArticleContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 60em) {
+        display: block;
+        & > * {
+            margin-bottom: 20px !important;
+            width: 100% !important;
+        }
+    }
 `;
 export {
     ThirdStyle,

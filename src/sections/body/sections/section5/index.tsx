@@ -7,8 +7,6 @@ import styled from "styled-components"
 import TryCricket from "@assets/trycricket_2023.webp";
 
 const ActionButton = styled(Button)`
-    /* background-color: #3170B7; */
-    /* padding: 1.5rem 3.5rem; */
     padding: 1.5rem 0;
     width: 25rem;
 `;

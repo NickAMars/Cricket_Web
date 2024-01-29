@@ -22,6 +22,9 @@ const NationArticleCardContain = styled(Card)`
 const CardImage = styled(CardMedia)`
     height: 17rem;
     width: 100%;
+    @media only screen and (max-width: 55em) {
+        height: 30rem;
+    }
 `;
 
 const Content = styled(CardContent)`

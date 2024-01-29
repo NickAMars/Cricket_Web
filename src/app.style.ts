@@ -4,7 +4,7 @@ const MainLayout = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color:${props=>props.theme.palette.common.white};
   
 `
 
@@ -30,7 +30,7 @@ const Line = styled.div`
 
 const Title = styled(Typography)`
     text-align: center;
-    background-color: #fff;
+    background-color:${props=>props.theme.palette.common.white};
     padding: 0 3rem;
     margin: 40px 0;
     line-height: 2rem;
@@ -46,6 +46,7 @@ const Container = styled.section`
     }
     @media only screen and (max-width: 50em) {
         padding: 0 10rem;
+        display: black;
     }
 
     & >  *{
@@ -64,6 +65,12 @@ const SmallContainer = styled(Box)`
 const ArticleContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 55em) {
+        display: block;
+        & > * {
+            width: 100% !important;
+        }
+    }
 `;
 
 

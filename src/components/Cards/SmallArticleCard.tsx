@@ -22,8 +22,6 @@ const Title = styled(Typography)`
 `;
 
 const ActionButton = styled(Button)`
-    /* color: #fff; */
-    /* background-color: #3170B7; */
     padding: 1rem 2rem;
     width: 100%;
 `;

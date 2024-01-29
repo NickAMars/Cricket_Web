@@ -30,3 +30,10 @@ export const SUB_NAB_ITEMS: Navigation [] = [
     options: ["Bring Your Own Phone", "How Cricket Works", "Why Choose Cricket", "Support"]},
 ]
 
+export const SMALL_SIZE_NAV: Navigation [] = [
+    {text: 'Help', Icon: InsertCommentIcon, Dropdown: false, revert: true},
+    {text: 'Sign In', Icon: PersonIcon, Dropdown: false, revert: true,
+        options: [ "Pay My Bill","Auto Pay","Billing History","Usage","Plan & Services","Account Settings"]},
+    {text: 'Cart(0)', Icon: ShoppingCartIcon, Dropdown: false, revert: true},
+]
+

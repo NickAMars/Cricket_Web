@@ -7,6 +7,7 @@ interface Props {
     list: Navigation[];
     isBGColor: boolean;
     position?: string;
+    revert?: boolean;
 }
 
 
@@ -32,12 +33,12 @@ const ListItemStyle = styled(ListItem)`
     }
 `;
 export const ListComponent: React.FC<Props> = (props) => {
-    const { list, isBGColor, position} = props;
+    const { list, isBGColor, position, revert} = props;
     return <ListStyle aria-details={position}>
     {
         list.map(item => {
         return <ListItemStyle  aria-details={position}  key={item.text} disablePadding>
-                        <NavigationButton {...item} isBGColor={isBGColor}/>
+                        <NavigationButton {...item} isBGColor={isBGColor} revert={revert}/>
             </ListItemStyle>
                
         })

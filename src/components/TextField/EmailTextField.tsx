@@ -6,7 +6,7 @@ import { theme } from "@src/theme";
 const EmailTextField = styled(Box)`
     display: flex;
     align-items: flex-end;
-    color: #fff;
+    color: ${props=>props.theme.palette.common.white};
     margin-bottom: 15px;
 `;
 const InputField = styled(TextField)`

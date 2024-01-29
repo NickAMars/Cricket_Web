@@ -14,8 +14,13 @@ const PhoneDeals = styled.article`
     grid-template-rows: repeat(2, auto);
     max-width: 1190px;
     margin: 0 auto;
-    @media only screen and (max-width: 58em) {
+    @media only screen and (max-width: 60em) {
         grid-template-columns: 1fr;
+        margin: 0 !important;
+        padding: 0 15rem;
+        & > * {
+            width: 100% !important;
+        }
     }
 `;
 

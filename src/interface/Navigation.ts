@@ -4,5 +4,6 @@ export interface  Navigation {
     Dropdown?: any,
     color?: string,
     size?: string
-    options?: string []
+    options?: string [],
+    revert?: boolean;
 }

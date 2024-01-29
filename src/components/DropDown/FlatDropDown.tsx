@@ -21,13 +21,13 @@ const MenuListStyle = styled(MenuList)`
     justify-content: center;
 `
 const MenuStyle = styled(Paper)`
-        border-top: 1px solid #000;
+        border-top: 1px solid  ${({theme: {palette: {common}}})=> common.black};;
         border-radius: 0;
 `
 const MenuItemStyle = styled(MenuItem)`
 &:hover {
     background-color: transparent;
-    color: #3170B7;
+    color: ${({theme: {palette: {secondary}}})=> secondary.main};
 }
 `
 export const FlatDropDown: React.FC<Props> = (props) => {
@@ -41,7 +41,7 @@ export const FlatDropDown: React.FC<Props> = (props) => {
                 transition
                 
                 disablePortal>
-                {({ TransitionProps, placement }) => (
+                {({ TransitionProps }) => (
                     <Grow
                     {...TransitionProps}
                     

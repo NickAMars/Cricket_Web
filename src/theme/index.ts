@@ -4,20 +4,28 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 export const theme = createTheme({
     palette: {
+      common:{
+        black: "#404041",
+        white: "#FFF"
+      },
         primary: {
           dark: '#497e25',
           main: '#60a630',
           light: '#86ce55',
         },
         secondary: {
-          dark: '#000',
-          main: '#FFF',
-          light: "#DDD"
+          dark: '#003E7F',
+          main: '#3170b7',
+          light: "#4c8acf"
         },
         info: {
           main: '#3170B7',
-          dark: '#003E7F'
+          dark: '#003E7F',
+          light: "#4c8acf"
         },
+        grey:{
+          50: '#DDD'
+        }
     },
     typography: {
       h1: {

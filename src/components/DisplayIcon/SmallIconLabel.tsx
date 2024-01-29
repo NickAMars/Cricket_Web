@@ -13,18 +13,21 @@ import styled from "styled-components";
     margin-right: 10px;
     cursor: auto;
     & > svg {
-      color: #fff;
+      color:  ${({theme: {palette: {common}}})=> common.white};
       height: 18px;
       width: 18px;
     }
   `
   const Description = styled(Typography)`
-    color: #000;
+    color:  ${({theme: {palette: {common}}})=> common.black};
   `
-  const IconLabelContainer = styled(Typography)`
+  const IconLabelContainer = styled.div`
     display: flex;
     align-items: center;
     margin: 0 20px;
+    @media only screen and (max-width: 60em) {
+        margin: 10px 0;
+    }
   `
 export const SmallIconLabel: React.FC<Props> = (props) => {
   const { text, Icon} = props;

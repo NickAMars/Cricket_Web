@@ -32,12 +32,12 @@ const Title = styled(Typography)`
 `;
 
 const ActionButton = styled(Button)`
-    color: #fff;
+    color: ${props=>props.theme.palette.common.white};
     width: 100%;
-    background-color: #3170B7;
+    background-color: ${({theme: {palette: {secondary}}})=> secondary.main};
     padding: 1.7rem 3rem;
     &:hover{
-        background-color: #003E7F;
+        background-color: ${({theme: {palette: {secondary}}})=> secondary.dark};
     }
 `;
 const Header = styled(CardHeader)`

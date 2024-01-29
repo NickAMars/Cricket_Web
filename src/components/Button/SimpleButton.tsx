@@ -8,13 +8,13 @@ import styled from "styled-components";
     content?: string;
   }
   const ButtonStyle = styled(Button)`
-    color: ${props => !props.content? props.theme.palette.secondary.main: props.theme.palette.info.main};
-    background-color: ${props => !props.content?  props.theme.palette.info.main : props.theme.palette.secondary.main};
+    color: ${props => !props.content? props.theme.palette.common.white: props.theme.palette.info.main};
+    background-color: ${props => !props.content?  props.theme.palette.info.main : props.theme.palette.common.white};
     border: 1px solid ${props => props.theme.palette.info.light};
     padding: 1rem 2rem;
     margin-bottom: 10px;
     &:hover{
-      background-color: ${props => !props.content?  props.theme.palette.info.dark : props.theme.palette.secondary.light};
+      background-color: ${props => !props.content?  props.theme.palette.info.dark : props.theme.palette.common.white};
       border: 1px solid ${props => props.theme.palette.info.dark};
     }
   `

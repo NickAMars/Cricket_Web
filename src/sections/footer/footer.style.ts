@@ -6,7 +6,6 @@ import styled from "styled-components";
 const FooterStyle = styled.section`
     display: flex;
     flex-direction: column;
-    /* background-color: #404041; */
 `;
 const FirstFooterStyle = styled.form`
     display: flex;
@@ -32,16 +31,16 @@ const SignUpDescr = styled(Typography)`
 const SecondFooterStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
-    background-color: #404041;
-    color: #fff;
+    background-color: ${({theme: {palette: {common}}})=> common.black};
+    color: ${({theme: {palette: {common}}})=> common.white};
     justify-content:  center;
     & > * {
         margin: 0 40px;
     }
 `;
 const EndingFooterStyle = styled.div`
-    background-color: #404041;
-    color: #fff;
+    background-color: ${({theme: {palette: {common}}})=> common.black};
+    color:  ${({theme: {palette: {common}}})=> common.white};
     padding: 5rem 10rem;
 `;
 

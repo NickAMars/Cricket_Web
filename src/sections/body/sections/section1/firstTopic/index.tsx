@@ -18,9 +18,10 @@ const ButtonCta = styled(Button)`
     margin-top: 15px; 
     padding: 1rem 2rem;
     width: 100%;
-    color: #3170B7;
+    color: ${({theme: {palette: {secondary}}})=> secondary.main};
+    background-color: ${({theme: {palette: {common}}})=> common.white};
     &:hover {
-        background-color: #fff;
+        background-color: ${({theme: {palette: {common}}})=> common.white};
     }
 `;
 const Divider = styled.div`
@@ -29,6 +30,9 @@ const Divider = styled.div`
     align-items: center;
     & > * {
         flex: 1 0 45rem;
+    }
+    @media only screen and (max-width: 60em) {
+        display: block;
     }
 `;
 
@@ -46,7 +50,7 @@ export const FirstTopic: React.FC<{}> = (props) => {
                         </MainTopic>
                         <SubTopic variant='h3'>Get a 14-day free trial of the Cricket Network without interrupting your current service. </SubTopic>
                         <CtaContainer>
-                            <ButtonCta disableRipple variant="contained" color="secondary">Get the app now</ButtonCta>
+                            <ButtonCta disableRipple variant="contained">Get the app now</ButtonCta>
                         </CtaContainer>
                     </Part1>
                     <div>

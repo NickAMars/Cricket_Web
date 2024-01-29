@@ -1,4 +1,8 @@
-import { Coverage, CoverageAction, CoverageHeader, CoverageHidden, CoverageSubTopic, GlobalNetwork, HiddenDetail, MapButton, Plan, PlanContainer, PlanIncluded, PlanIncludedHeader, SecondStyle, StoreButton, WorldMap } from "./section2.style"
+import {    Coverage, CoverageAction, CoverageHeader,
+            CoverageHidden, CoverageSubTopic, GlobalNetwork,
+            HiddenDetail, MapButton, Plan, PlanContainer,
+            PlanIncluded, PlanIncludedHeader, SecondStyle,
+            StoreButton, WorldMap } from "./section2.style"
 import { Container, Line, Title } from "@src/app.style";
 import { IconCard } from "@src/components/Cards/IconCard";
 import { SmallCard } from "@src/components/Cards/SmallCard";

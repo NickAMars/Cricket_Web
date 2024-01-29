@@ -4,18 +4,19 @@ import Popper from '@mui/material/Popper';
 import { ClickAwayListener, Grow, MenuList, Paper, Typography } from '@mui/material';
 import styled from 'styled-components';
 import SimpleButton from '../Button/SimpleButton';
-// import styled from 'styled-components';
 
 interface Props {
     options: string [] | undefined;
     open: boolean;
+    revert?: boolean;
     handleClose: (event: any) => void;
     handleListKeyDown: (event: any) => void;
   }
   const PopperContainer = styled(Popper)`
         position: absolute !important;
         z-index: 2;
-        top: 42px !important;
+        top: 65px !important;
+        left: -30rem !important;
         cursor: auto;
    `
    const MenuListStyle = styled(MenuList)`
@@ -23,15 +24,15 @@ interface Props {
         flex-direction: column;
         align-items: flex-start;
         width: 450px;
-        /* padding: 16px 20px; */
     `
+
     const MenuItemStyle = styled(MenuItem)`
         width: 100%;
-        color: #3170B7;
+        color: ${({theme: {palette: {secondary}}})=> secondary.main};
         padding: 16px 20px;
         &:hover {
             background-color: transparent;
-            color: #003E7F;
+            color: ${({theme: {palette: {secondary}}})=> secondary.dark};
             text-decoration:underline;
         }
     `
@@ -57,14 +58,13 @@ interface Props {
     `
 export const SignUpDropDown: React.FC<Props> = (props) => {
 
-    const {open, handleClose, handleListKeyDown, options} = props;
+    const {open, handleClose, handleListKeyDown, options, revert} = props;
   
     return <PopperContainer           
                 open={open}
                 role={undefined}
-                placement="bottom-start"
                 transition
-                
+                aria-checked={revert}
                 disablePortal>
                 {({ TransitionProps }) => (
                     <Grow

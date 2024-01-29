@@ -24,6 +24,7 @@ const ArticleCardContain = styled(Card)`
 const CardImage = styled(CardMedia)`
     height: 17rem;
     width: 100%;
+    object-fit:scale-down;
 `;
 
 const Title = styled(Typography)`
@@ -33,7 +34,7 @@ const Title = styled(Typography)`
 `;
 
 const ActionButton = styled(Button)`
-    color: #0288d1;
+    color:  ${({theme: {palette: {secondary}}})=> secondary.main};
     font-size: 1.3rem;
     text-decoration: underline;
 `;

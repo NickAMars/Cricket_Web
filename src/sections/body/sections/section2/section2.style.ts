@@ -11,6 +11,13 @@ const Plan = styled(Box)`
     flex-direction:  row;
     justify-content: space-evenly;
     margin-bottom: 40px;
+    @media only screen and (max-width: 60em) {
+        display: block;
+        & > * {
+            margin-bottom: 20px !important;
+            width: 100% !important;
+        }
+    }
 `;
 const PlanIncluded = styled(Box)`
     display: flex;
@@ -18,7 +25,7 @@ const PlanIncluded = styled(Box)`
     align-items: center;
     min-height: 105px;
     margin: 20px 0;
-    background-color: #fff;
+    background-color: ${props=>props.theme.palette.common.white};
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0,0,0,.25);
 `;
@@ -31,6 +38,11 @@ const PlanContainer = styled.div`
     flex-wrap: wrap;
     margin: 20px 0 10px 0;
     width: 100%;
+    @media only screen and (max-width: 60em) {
+        display: block;
+        width: auto;
+        text-align: center;
+    }
 `;
 
 const HiddenDetail = styled(Typography)`

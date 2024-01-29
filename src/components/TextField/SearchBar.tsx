@@ -7,7 +7,7 @@ import { theme } from "@src/theme";
 const SearchBar = styled(Box)`
     display: flex;
     align-items: flex-end;
-    color: #fff;
+    color: ${props=>props.theme.palette.common.white};
     & > div > div {
         border-radius: 0;
     }

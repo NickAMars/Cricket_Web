@@ -24,7 +24,11 @@ export const theme = createTheme({
           light: "#4c8acf"
         },
         grey:{
-          50: '#DDD'
+          50: '#AAA',
+          100: '#BBB',
+          200: "#CCC",
+          300: "#DDD",
+          400: "#EEE"
         }
     },
     typography: {

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Button, Typography } from "@mui/material";
 import styled from "styled-components";
 import { FlatDropDown } from "../DropDown/FlatDropDown";
 import { SignUpDropDown } from "../DropDown/SignUpDropDown";
+import { HelpDropDown } from "../DropDown/HelpDropDown";
 
   interface Props {
     text: string;
@@ -12,9 +13,13 @@ import { SignUpDropDown } from "../DropDown/SignUpDropDown";
     size?: string;
     revert?: boolean;
     options?: string [];
+    menu?:boolean;
 
   }
   const ButtonStyle = styled(Button)`
+  display: flex;
+  flex-direction: ${props => props["aria-checked"] ? "column": "row"};
+  justify-content: center;
   position: unset;
     color: ${({disableFocusRipple, theme: {palette: {common}}}) => 
         disableFocusRipple? common.black: common.white};
@@ -28,30 +33,22 @@ import { SignUpDropDown } from "../DropDown/SignUpDropDown";
 
 const NavigationButton: React.FC<Props> = (props) => {
   const [open, setOpen] = useState(false);
-  const { text, Icon, isBGColor, Dropdown, size, options, revert} = props;
-  const empty = () => {};
-  const handleOpen = (event: Event | React.SyntheticEvent) => {
-    setOpen(true);
-  };
-  const handleClose = (event: Event | React.SyntheticEvent) => {
-    setOpen(false);
-  };
-
-  function handleListKeyDown(event: React.KeyboardEvent) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-      setOpen(false); 
-    } else if (event.key === "Escape") {
-      setOpen(false);
-    }
-  }
+  const { text, Icon, isBGColor, Dropdown, size, options, revert, menu} = props;
+  const empty = useCallback(() => {},[]);
+  const handleOpen = useCallback(() => {
+    setOpen((o)=> o !== true);
+  }, []);
+  const handleClose = useCallback(() => {
+    setOpen((o)=> false);
+  }, []);
   return ( <>
       <ButtonStyle aria-checked={ revert } disableFocusRipple={isBGColor} disableRipple={true} 
-        onMouseOut={!!Icon ? empty : handleClose} onMouseOver={!!Icon ? empty : handleOpen} onClick={handleOpen}
+        onMouseOut={menu ? empty : handleClose} onMouseOver={menu ? empty : handleOpen} onClick={handleOpen}
         startIcon={Icon? <Icon />: undefined} endIcon={Dropdown? <Dropdown />: undefined}>
         <Typography sx={{ fontSize: size? size : "12px"}}>{ text }</Typography>
-        {!Icon && options && <FlatDropDown  handleClose={handleClose} handleListKeyDown={handleListKeyDown} open={open} options={options}/> }
-        {!!Icon && options && <SignUpDropDown  handleClose={handleClose} handleListKeyDown={handleListKeyDown} open={open} options={options} revert={revert}/> }
+        {!menu && options && <FlatDropDown  handleClose={handleClose} open={open} options={options}/> }
+        {text === "Sign In" && options && <SignUpDropDown  handleClose={handleClose} open={open} options={options} revert={revert}/> }
+        { text === "Help" && <HelpDropDown handleClose={handleClose} open={open} />}
       </ButtonStyle>
   </>
   );

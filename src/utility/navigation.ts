@@ -12,8 +12,8 @@ export const NAV_ITEMS: Navigation [] = [
     {text: 'Coverage', Icon: undefined, Dropdown: false},
     {text: 'Quick Pay', Icon: undefined, Dropdown: false},
     {text: 'Activate', Icon: undefined, Dropdown: false},
-    {text: 'Help', Icon: InsertCommentIcon, Dropdown: false},
-    {text: 'Sign In', Icon: PersonIcon, Dropdown: KeyboardArrowDownIcon, 
+    {text: 'Help', Icon: InsertCommentIcon, Dropdown: false, menu: true},
+    {text: 'Sign In', Icon: PersonIcon, Dropdown: KeyboardArrowDownIcon, menu: true,
         options: [ "Pay My Bill","Auto Pay","Billing History","Usage","Plan & Services","Account Settings"]},
     {text: 'Cart(0)', Icon: ShoppingCartIcon, Dropdown: false},
 ];

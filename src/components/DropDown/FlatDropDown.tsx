@@ -7,7 +7,6 @@ interface Props {
     options: string [] | undefined;
     open: boolean;
     handleClose: (event: any) => void;
-    handleListKeyDown: (event: any) => void;
   }
 
   const PopperContainer = styled(Popper)`
@@ -32,7 +31,7 @@ const MenuItemStyle = styled(MenuItem)`
 `
 export const FlatDropDown: React.FC<Props> = (props) => {
 
-    const {open, handleClose, handleListKeyDown, options} = props;
+    const {open, handleClose, options} = props;
   
     return <PopperContainer           
                 open={open}
@@ -51,7 +50,6 @@ export const FlatDropDown: React.FC<Props> = (props) => {
                             <MenuListStyle
                                 id="composition-menu"
                                 aria-labelledby="composition-button"
-                                onKeyDown={handleListKeyDown}
                             >
                                     {options?.map(option => <MenuItemStyle key={option} disableRipple={true} onClick={handleClose}>
                                         <Typography sx={{ fontSize:"17px"}}>

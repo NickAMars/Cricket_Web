@@ -10,13 +10,12 @@ interface Props {
     open: boolean;
     revert?: boolean;
     handleClose: (event: any) => void;
-    handleListKeyDown: (event: any) => void;
   }
   const PopperContainer = styled(Popper)`
         position: absolute !important;
         z-index: 2;
         top: 65px !important;
-        left: -30rem !important;
+        left: ${props => props['aria-checked']? "-37rem": "-33rem"} !important;
         cursor: auto;
    `
    const MenuListStyle = styled(MenuList)`
@@ -58,7 +57,7 @@ interface Props {
     `
 export const SignUpDropDown: React.FC<Props> = (props) => {
 
-    const {open, handleClose, handleListKeyDown, options, revert} = props;
+    const {open, handleClose, options, revert} = props;
   
     return <PopperContainer           
                 open={open}
@@ -75,7 +74,6 @@ export const SignUpDropDown: React.FC<Props> = (props) => {
                             <MenuListStyle
                                 id="composition-menu"
                                 aria-labelledby="composition-button"
-                                onKeyDown={handleListKeyDown}
                             >
                                     <HeaderStyle variant='subtitle2'>
                                         Online Account

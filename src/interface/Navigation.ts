@@ -5,5 +5,6 @@ export interface  Navigation {
     color?: string,
     size?: string
     options?: string [],
-    revert?: boolean;
+    revert?: boolean
+    menu?: boolean
 }

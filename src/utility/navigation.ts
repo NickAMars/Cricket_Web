@@ -31,8 +31,8 @@ export const SUB_NAB_ITEMS: Navigation [] = [
 ]
 
 export const SMALL_SIZE_NAV: Navigation [] = [
-    {text: 'Help', Icon: InsertCommentIcon, Dropdown: false, revert: true},
-    {text: 'Sign In', Icon: PersonIcon, Dropdown: false, revert: true,
+    {text: 'Help', Icon: InsertCommentIcon, Dropdown: false, revert: true, menu: true},
+    {text: 'Sign In', Icon: PersonIcon, Dropdown: false, revert: true, menu: true,
         options: [ "Pay My Bill","Auto Pay","Billing History","Usage","Plan & Services","Account Settings"]},
     {text: 'Cart(0)', Icon: ShoppingCartIcon, Dropdown: false, revert: true},
 ]

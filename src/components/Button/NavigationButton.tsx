@@ -36,7 +36,9 @@ const NavigationButton: React.FC<Props> = (props) => {
   const { text, Icon, isBGColor, Dropdown, size, options, revert, menu} = props;
   const empty = useCallback(() => {},[]);
   const handleOpen = useCallback(() => {
-    setOpen(true);
+    if(!open){
+      setOpen(true);
+    }
   }, [open]);
   const handleClose = useCallback(() => {
     setOpen(false);

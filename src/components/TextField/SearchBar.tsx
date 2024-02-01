@@ -9,13 +9,13 @@ const SearchBar = styled(Box)`
     align-items: flex-end;
     color: ${props=>props.theme.palette.common.white};
     width: 27rem;
-    margin-top: 10px;
     border-radius: 0;
     & > div{
         background-color: #fff;
         width:100%;
         border-radius: 0;
         padding:0;
+        margin: 0; 
         &:hover{
             border-radius: 0;
         }
@@ -25,11 +25,7 @@ const SearchInput = styled(InputAdornment)`
     display: flex;
     justify-content: space-between;
 `
-const SearchIcon = styled(IconButton)`
-    &:hover{
-        border-radius: 50px;
-    }
-`
+
 export const SearchBarComponent: React.FC<{}> = (props) => {
 
     return (

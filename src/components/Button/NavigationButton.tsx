@@ -45,7 +45,7 @@ const NavigationButton: React.FC<Props> = (props) => {
   }, [open]);
   return ( <>
       <ButtonStyle aria-checked={ revert } disableFocusRipple={isBGColor} disableRipple={true} 
-        onMouseOut={menu ? empty : handleClose} onMouseOver={menu ? empty : handleOpen} onClick={handleOpen}
+        onMouseLeave={menu ? empty : handleClose} onMouseOver={menu ? empty : handleOpen} onClick={handleOpen}
         startIcon={Icon? <Icon />: undefined} endIcon={Dropdown? <Dropdown />: undefined}>
         <Typography sx={{ fontSize: size? size : "12px"}}>{ text }</Typography>
         {!menu && options && <FlatDropDown  handleClose={handleClose} open={open} options={options}/> }

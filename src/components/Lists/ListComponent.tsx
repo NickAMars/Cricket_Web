@@ -52,7 +52,6 @@ const ListItemStyle = styled(ListItem)`
     `;
     const SliderContainer = styled(Box)`
         width: 300px;
-        /* padding: 0 20px; */
         padding-top: 80px;
         display: flex;
         flex-direction: column;
@@ -68,6 +67,7 @@ const ListItemStyle = styled(ListItem)`
         justify-content:space-around;
         align-items: baseline;
         text-align: left;
+        margin-bottom: 15px;
     `
 export const ListComponent: React.FC<Props> = (props) => {
     const [open, openDrawer] = useState<boolean>(false);
@@ -97,7 +97,6 @@ export const ListComponent: React.FC<Props> = (props) => {
                                         <Typography variant="subtitle2">Create Account</Typography>
                                     </SignInCreateContainer>
                                     <SearchBarComponent />
-                                    {/* add an accordium */}
                                     <AccordionComponent/>
                                 </SliderContainer>
                             </SwipeableDrawer>

@@ -9,9 +9,9 @@ const AccordionContainer = styled(Accordion)`
   box-shadow: none;
   width: 100%;
   padding: 0 20px;
-  &::before {
+  /* &::before {
     content: none;
-  }
+  } */
   & > div {
     padding: 0;
   }
@@ -49,7 +49,7 @@ export const AccordionComponent: React.FC<{}> = (props) => {
         setExpanded((expanel: string)=> expanel !== panel ? panel : "");
       }
     },[expanded]);
-    return <>
+    return <div style={{ marginTop: 15, width: "100%"}}>
     {SUB_NAB_ITEMS.map(nav=><AccordionContainer
         expanded={nav.text === expanded}
         onChange={toggleAccordions.bind(null,nav.text)}
@@ -85,5 +85,5 @@ export const AccordionComponent: React.FC<{}> = (props) => {
           </NavText>
         </AccordionSummary>
       </NavAcc>)}
-    </>;
+    </div>;
 }

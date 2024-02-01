@@ -21,7 +21,7 @@ const HeaderIcon = styled(CloseIcon)`
 const CardContainer = styled.div`
     display: flex;
     align-items: center;
-    border: 1px solid ${ ({theme: {palette}})=> palette.grey[400]};
+    border: 1px solid ${ ({theme: {palette}})=> palette.grey[100]};
     border-radius:  10px;
     padding: 20px 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .2);
@@ -64,6 +64,7 @@ const StoreContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid ${ ({theme: {palette}})=> palette.grey[100]};
     width: 100%;
     padding: 20px 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .2);

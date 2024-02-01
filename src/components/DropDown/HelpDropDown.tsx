@@ -1,14 +1,12 @@
-
-import MenuItem from '@mui/material/MenuItem';
 import Popper from '@mui/material/Popper';
 import { ClickAwayListener, Grow, MenuList, Paper, Typography } from '@mui/material';
 import styled from 'styled-components';
-import SimpleButton from '../Button/SimpleButton';
-import CloseIcon from '@mui/icons-material/Close';
 import UnifiedChat from "@assets/unified_chat-chat.webp";
 import UnifiedSupport from "@assets/unified_chat-support.webp";
 import IconStore from "@assets/icon-store-blue-40x40.png";
-import { ActionLink, Availability, CardContainer, CardDescription, CardDetail, CardImage, CardTitle, HeaderContainer, HeaderIcon, StoreContainer, StoreIcon } from './dropdown.style';
+import { ActionLink, Availability, CardContainer,
+     CardDescription, CardDetail, CardImage, CardTitle,
+      HeaderContainer, HeaderIcon, StoreContainer, StoreIcon } from './dropdown.style';
 
 interface Props {
     open: boolean;

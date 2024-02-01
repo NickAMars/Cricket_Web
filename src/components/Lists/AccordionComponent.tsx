@@ -34,6 +34,9 @@ const NavText = styled(Typography)`
 `
 const NavAcc = styled(AccordionContainer)`
   background-color: ${ ({theme: {palette: {common}}}) => common.black};
+  &::before{
+    content:none;
+  }
 `
 const ExpandIcon = styled(ExpandMoreIcon)`
   color: ${ ({theme: {palette: {common}}}) => common.white} !important;

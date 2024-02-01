@@ -78,7 +78,7 @@ export const ListComponent: React.FC<Props> = (props) => {
     return <ListStyle aria-details={position}>
     {
         list.map(item => { 
-        if (item.text === "Space") return  <VerticalLine />;
+        if (item.text === "Space") return  <VerticalLine key={item.text}  />;
         return <ListItemStyle  aria-details={position}  key={item.text} disablePadding>
                          { item.text !== "Menu" &&
                          <NavigationButton {...item} isBGColor={isBGColor} revert={revert}/>}

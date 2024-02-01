@@ -50,11 +50,11 @@ export const AccordionComponent: React.FC<{}> = (props) => {
       }
     },[expanded]);
     return <div style={{ marginTop: 15, width: "100%"}}>
-    {SUB_NAB_ITEMS.map(nav=><AccordionContainer
+    {SUB_NAB_ITEMS.map(nav=><AccordionContainer key={nav.text}
         expanded={nav.text === expanded}
         onChange={toggleAccordions.bind(null,nav.text)}
       >
-        <AccordionSummary
+        <AccordionSummary 
           expandIcon={nav.options ? <ExpandIcon /> : <></>}
         >
           <SubNavText  variant="subtitle2" color="info">
@@ -65,7 +65,7 @@ export const AccordionComponent: React.FC<{}> = (props) => {
           <ListStyle>
             { nav.options?.map(
               option =>(
-                <ListItemStyle>
+                <ListItemStyle key={option}>
                     <Typography variant="subtitle2" fontWeight={100}>
                       {option}
                     </Typography>
@@ -76,7 +76,9 @@ export const AccordionComponent: React.FC<{}> = (props) => {
            </ListStyle>
         </AccordionDetails> }
       </AccordionContainer>)}
-      {NAV_ITEMS.map(nav=><NavAcc>
+      {NAV_ITEMS.map(nav=><NavAcc
+         expanded={false}
+         key={nav.text}>
         <AccordionSummary
           expandIcon={<></>}
         >

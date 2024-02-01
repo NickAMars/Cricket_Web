@@ -56,7 +56,7 @@ export const HelpDropDown: React.FC<Props> = (props) => {
                             >
                                 <HeaderContainer>
                                     <Typography variant='subtitle1'>Help</Typography>
-                                    <HeaderIcon fontSize={"large"} />
+                                    <HeaderIcon fontSize={"large"} onClick={handleClose}/>
                                 </HeaderContainer>
                                 <Typography variant='subtitle2' fontWeight={100}>
                                     We go the extra smile to help our customers. Connect with an expert via text chat and more.
@@ -74,7 +74,7 @@ export const HelpDropDown: React.FC<Props> = (props) => {
                                             </Availability>
                                             <Typography fontSize={16}>Our digital assistant is available 24/7.</Typography>
                                         </CardDescription>
-                                        <ActionLink>
+                                        <ActionLink onClick={handleClose}>
                                             Chat with Us
                                         </ActionLink>
                                     </CardDetail>
@@ -86,7 +86,7 @@ export const HelpDropDown: React.FC<Props> = (props) => {
                                         <CardDescription>
                                             <Typography fontSize={16}>Visit our support page to find the most up-to-date solutions so you can do it yourself.</Typography>
                                         </CardDescription>
-                                        <ActionLink>
+                                        <ActionLink onClick={handleClose}>
                                             Find Answers
                                         </ActionLink>
                                     </CardDetail>
@@ -94,7 +94,7 @@ export const HelpDropDown: React.FC<Props> = (props) => {
                                 <StoreContainer>
                                     <StoreIcon src={IconStore} alt="" />
                                     <Typography fontSize={16}> Get in Store Help </Typography>
-                                    <ActionLink> Find a Store </ActionLink>
+                                    <ActionLink onClick={handleClose}> Find a Store </ActionLink>
                                 </StoreContainer>
                             </MenuListStyle>
                         </ClickAwayListener>

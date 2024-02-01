@@ -36,11 +36,11 @@ const NavigationButton: React.FC<Props> = (props) => {
   const { text, Icon, isBGColor, Dropdown, size, options, revert, menu} = props;
   const empty = useCallback(() => {},[]);
   const handleOpen = useCallback(() => {
-    setOpen((o)=> o !== true);
-  }, []);
+    setOpen(true);
+  }, [open]);
   const handleClose = useCallback(() => {
-    setOpen((o)=> false);
-  }, []);
+    setOpen(false);
+  }, [open]);
   return ( <>
       <ButtonStyle aria-checked={ revert } disableFocusRipple={isBGColor} disableRipple={true} 
         onMouseOut={menu ? empty : handleClose} onMouseOver={menu ? empty : handleOpen} onClick={handleOpen}

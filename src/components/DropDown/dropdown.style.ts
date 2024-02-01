@@ -55,6 +55,7 @@ const CardDetail = styled.div`
     font-size: 16px;
 `
 const ActionLink = styled.a`
+    cursor: pointer;
     font-size: 16px;
     text-decoration: underline;
     color: ${ ({theme: {palette: {secondary}}})=> secondary.main};

@@ -5,6 +5,8 @@ import { Navigation } from '@src/interface/Navigation';
 
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
+import MenuIcon from '@mui/icons-material/Menu';
+import ClearIcon from '@mui/icons-material/Clear';
 
 export const NAV_ITEMS: Navigation [] = [ 
     {text: "Español", Icon: undefined, Dropdown: false},
@@ -35,5 +37,7 @@ export const SMALL_SIZE_NAV: Navigation [] = [
     {text: 'Sign In', Icon: PersonIcon, Dropdown: false, revert: true, menu: true,
         options: [ "Pay My Bill","Auto Pay","Billing History","Usage","Plan & Services","Account Settings"]},
     {text: 'Cart(0)', Icon: ShoppingCartIcon, Dropdown: false, revert: true},
+    {text: 'Space', Icon: undefined, Dropdown: false, revert: true},
+    {text: 'Menu', Icon: MenuIcon, FlipIcon: ClearIcon, revert: true},
 ]
 

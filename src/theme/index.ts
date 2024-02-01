@@ -24,11 +24,16 @@ export const theme = createTheme({
           light: "#4c8acf"
         },
         grey:{
-          50: '#AAA',
-          100: '#BBB',
+          50: '#EEE',
+          100: '#DDD',
           200: "#CCC",
-          300: "#DDD",
-          400: "#EEE"
+          300: "#BBB",
+          400: "#AAA",
+          500: "#999",
+          600: "#888",
+          700: "#777",
+          800: "#666",
+          900: "#555"
         }
     },
     typography: {

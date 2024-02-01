@@ -1,6 +1,7 @@
 export interface  Navigation {
     text: string, 
-    Icon?: any, 
+    Icon?: any,
+    FlipIcon?: any, 
     Dropdown?: any,
     color?: string,
     size?: string

@@ -19,7 +19,7 @@ export const Header: React.FC<{}> = (props) => {
       };
     }, [width]);
     return <>
-            { width > 900 && 
+            { width > 1000 && 
                 <HeaderComponent>    
                     <Fragment>
                         <ListComponent  position={"relative"} list={NAV_ITEMS} isBGColor={false}/>
